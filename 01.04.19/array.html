@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Array</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="main.js"></script>
+</head>
+
+<body>
+<button onclick="add()">Click</button>
+    <script>
+        var details = ['Pen', 'Book', 'Pencil'];
+        document.write(details);
+
+         document.write("<br>");
+
+        document.write(details['1']);
+
+        document.write("<br>");
+
+        var fruits = ['Mango', 'Apple', 'Orange'];
+        document.write(fruits);
+
+        document.write("<br>");
+
+        function add(){
+            fruits[fruits.length] = "Plus";
+            document.write(fruits);
+        }
+
+    </script>
+</body>
+
+</html>
