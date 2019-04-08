@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Calculator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css">
+    
+</head>
+<body>
+    <div class="container">
+        <h1 style="text-align:center">Calculator</h1>
+        <div class="calculator">
+            <form action="" name="form">
+                <tr>
+                    <td>
+                    <input type="text" placeholder="0" class="digit_place" name="display">
+                    </td>
+                </tr>
+            <tr>
+                <td>
+                    <input type="button" value="7" name="btn" class="button num" onclick="calculate(this.value)">
+                </td>
+                <td>
+                    <input type="button" value="8" name="" class="button num" onclick="calculate(this.value)">
+                </td>
+                <td>
+                    <input type="button" value="9" name="" class="button num" onclick="calculate(this.value)">
+                </td>
+                <td>
+                    <input type="button" value="+" name="" class="button assin" onclick="calculate(this.value)">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" value="4" name="" class="button num" onclick="calculate(this.value)">
+                </td>
+                <td>
+                    <input type="button" value="5" name="" class="button num" onclick="calculate(this.value)">
+                </td>
+                <td>
+                    <input type="button" value="6" name="" class="button num" onclick="calculate(this.value)">
+                </td>
+                <td>
+                    <input type="button" value="-" name="" class="button assin" onclick="calculate(this.value)">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" value="3" name="" class="button num" onclick="calculate(this.value)">
+                </td>
+                <td>
+                    <input type="button" value="2" name="" class="button num" onclick="calculate(this.value)">
+                </td>
+                <td>
+                    <input type="button" value="1" name="" class="button num" onclick="calculate(this.value)">
+                </td>
+                <td>
+                    <input type="button" value="*" name="" class="button assin" onclick="calculate(this.value)">
+                </td>
+                
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" value="0" name="" class="button" onclick="calculate(this.value)">
+                </td>
+                
+                <td>
+                    <input type="button" value="." name="" class="button num" onclick="calculate(this.value)">
+                </td>
+                <td>
+                    <input type="button" value="C" name="" class="button assin" onclick="display.value=null">
+                </td>
+                <td>
+                    <input type="button" value="/" name="" class="button assin" onclick="calculate(this.value)">
+                </td>
+                
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" value="(" name="" class="button assain" onclick="calculate(this.value)">
+                </td>
+                <td>
+                    <input type="button" value=")" name="" class="button assain" onclick="calculate(this.value)">
+                </td>
+                <td>
+                    <input type="button" value="=" name="" class="button equal" onclick="display.value = eval(display.value)">
+                </td>
+            </tr>
+            </form>
+        </div><!-- calculator -->
+    </div><!-- container -->
+    <script src="main.js"></script>
+</body>
+</html>

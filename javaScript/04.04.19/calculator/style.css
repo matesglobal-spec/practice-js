@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    width: 90%;
+    margin: 0 auto;
+}
+h1{
+    padding-top: 50px;
+}
+.calculator{
+    width: 50%;
+    margin: 20px auto;
+    text-align: right;
+    padding-right: 15px;
+}
+input{
+    text-align: center;
+    margin: 5px 0;
+    padding: 20px 0px;
+    font-size: 22px;
+}
+.digit_place{
+    width: 95.5%;
+    text-align: right;
+    padding-right: 20px;
+}
+.button{
+    width: 24.3%;
+}
+.equal{
+    width: 48.6%;
+    background: #4588F6;
+    border: none;
+}
+.num{
+    background: #F3F3F3;
+    border: none;
+}
+.assin{
+    background: #D3D3D3;
+    border: none;
+}
