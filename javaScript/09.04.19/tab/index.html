@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tab</title>
+    <style>
+       .container {
+           width: 60%;
+           margin: 100px auto;
+           background: #ffffff;
+       }
+       .tab_btn {
+           text-align: center;
+       }
+       ul{
+           margin: 0;
+           padding: 0;
+       }
+       .tab_btn ul li {
+           display: inline-block;
+           background: #222222cf;
+           color: #fff;
+           padding: 10px 30px;
+           cursor: pointer;
+           text-transform: uppercase;
+           font-weight: 700;
+       }
+       .tab_btn ul li:hover{
+           color: green;
+       }
+       .tab_btn ul li:hover{
+           color: green;
+       }
+       .item{
+           background: #222;
+           color: #ffff;
+           padding: 20px;
+       }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="tab_btn">
+            <ul>
+                <li class="btn" >Primary</li>
+                <li class="btn" >High School</a></li>
+                <li class="btn" >College</a></li>
+                <li class="btn" >University</a></li>
+            </ul>
+        </div><!-- btn -->
+        <div class="tab">
+            <div class="item">
+                <h1>Primary</h1>
+                <p>A primary school (or elementary school in American English and often in Canadian English) is a school in which children
+                receive primary or elementary education from the age of about five to eleven, coming after preschool, infant school and
+                before secondary school. (In some countries there is an intermediate stage of middle school between primary and
+                secondary education.)</p>
+                <p>In most parts of the world, primary education is the first stage of compulsory education, and is normally available
+                without charge, but may be offered in a fee-paying independent school. The term grade school is sometimes used in the
+                US, although this term may refer to both primary education and secondary education.</p>
+            </div><!-- item -->
+            <div class="item">
+                <h1>High School</h1>
+                <p>A secondary school is both an organization that provides secondary education and the building where this takes place.
+                Some secondary schools can provide both lower secondary education and upper secondary education (levels 2 and 3 of the
+                ISCED scale), but these can also be provided in separate schools, as in the American middle and high school system.</p><p>
+                
+                Secondary schools typically follow on from primary schools and lead into vocational and tertiary education. Attendance
+                is compulsory in most countries for students between the ages of 11 and 16. The organisations, buildings, and
+                terminology are more or less unique in each country.</p>
+            </div><!-- item -->
+            <div class="item">
+                <h1>College</h1>
+                <p>A college (Latin: collegium) is an educational institution or a constituent part of one. A college may be a
+                    degree-awarding tertiary educational institution, a part of a collegiate or federal university, an institution
+                    offering
+                    vocational education or a secondary school.</p>
+                <p>
+                
+                    In the United States, "college" may refer to a constituent part of a university or to a degree-awarding tertiary
+                    educational institution, but generally "college" and "university" are used interchangeably,[1] whereas in the United
+                    Kingdom, Oceania, South Asia, Southern Africa and Canada, "college" may refer to a secondary or high school, a
+                    college
+                    of further education, a training institution that awards trade qualifications, a higher education provider that does
+                    not
+                    have university status (often without its own degree-awarding powers), or a constituent part of a university (See
+                    this
+                    comparison of British and American English educational terminology for further information).</p>
+            </div><!-- item -->
+            <div class="item">
+            <h1>University</h1>
+            <p>A university (Latin: universitas, 'a whole') is an institution of higher (or tertiary) education and research which
+            awards academic degrees in various academic disciplines. Universities typically provide undergraduate education and
+            postgraduate education.</p>
+            <p>The word university is derived from the Latin universitas magistrorum et scholarium, which roughly means "community of
+            teachers and scholars".[1] While antecedents had existed in Asia and Africa,[2] the modern university system has roots
+            in the European medieval university, which was created in Italy and evolved from Catholic Cathedral schools for the
+            clergy during the High Middle Ages.</p>
+            </div><!-- item -->
+        </div><!-- tab -->
+    </div><!-- container -->
+
+
+
+    <script>
+       var btn = document.querySelectorAll('.btn');
+       var tab = document.querySelectorAll('.item');
+
+       function reset(){
+           for(let i = 0; i < tab.length; i++){
+               tab[i].style.display = 'none';
+               tab[i].style.backgroundColor = '#222222cf';
+           }
+       }
+        
+       function startTab(){
+           reset();
+           tab[0].style.display = 'block';
+           tab[0].style.backgroundColor = '#222222cf';
+       } 
+       startTab();
+
+      for (let a = 0; a < btn.length; a++) {
+          btn[a].addEventListener('click',function() {
+              reset();
+              tab[a].style.display = 'block';
+          });
+          
+      }
+
+      
+    </script>
+</body>
+</html>
