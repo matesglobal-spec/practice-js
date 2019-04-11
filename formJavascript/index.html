@@ -64,6 +64,21 @@
             cursor: pointer;
         }
 
+        @keyframes shake {
+            0%{
+               transform: translate(-50%,-50%) rotate(0deg);
+            }
+            25%{
+                transform: translate(-50%,-50%) rotate(10deg);
+            }
+            50%{
+                transform: translate(-50%,-50%) rotate(0deg);  
+            }
+            100%{
+                transform: translate(-50%,-50%) rotate(10deg);
+            }
+        }     
+
     </style>
 </head>
 <body>
@@ -102,18 +117,14 @@
 
                 if(input.type === 'text' && validateUser(input)){
                     nextSlide(parent, nextForm);
-                }
-
-                if(input.type === 'email' && validateEmail(input)){
+                }else if(input.type === 'email' && validateEmail(input)){
                     nextSlide(parent, nextForm);
-                }
-
-                if(input.type === 'password'){
+                }else if(input.type === 'password' && validatePass(input)){
                     nextSlide(parent, nextForm);
-                }
-
-                if(input.type === 'thank'){
+                }else if(input.type === 'thank'){
                     nextSlide(parent, nextForm);
+                }else{
+                   parent.style.animation = 'shake 0.5s ease';
                 }
             });
           });
@@ -121,7 +132,7 @@
 
        function validateUser(user){
           
-           if( user.value.length < 6 ){
+           if( user.value.length < 6 ){ 
                error('rgb(189,87,87)');
            }else{
                error('rgb(87, 189, 130)');
@@ -139,7 +150,16 @@
                 error('rgb(189,87,87)');
               }
        }    
-
+       
+       function validatePass(password){
+          
+          if( password.value.length < 8 ){ 
+              error('rgb(189,87,87)');
+          }else{
+              error('rgb(87, 189, 130)');
+              return true;
+          }
+      }
        
        function nextSlide(parent, nextForm){
            parent.classList.add('inactive');
