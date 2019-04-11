@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>formJavascript</title>
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            position: relative;
+            background: rgb(87, 189, 130);
+            transition: background 0.5s ease;
+        }
+        .user,
+        .email,
+        .password,
+        .thank {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 400px;
+            height: 50px;
+            background: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 18px;
+            border-radius: 4px;
+            transition: all 0.5s ease-in;
+        }
+        input {
+            height: 100%;
+            width: 100%;
+            border: none;
+            outline: none;
+            background: transparent;
+            font-size: 18px;
+            font-weight: 700;
+        }
+        ::placeholder {
+            font-size: 18px;
+            font-weight: 700;
+        }
+        p {
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        img {
+            padding: 0 10px;
+        }
+        .inactive {
+            opacity: 0;
+            transform: translate(-50%, 50%);
+        }
+        .active {
+            opacity: 1;
+            transform: translate(-50%, -50%);
+        }
+        .arrow-down {
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+    <form action="">
+            <div class="user">
+                <img src="https://img.icons8.com/metro/26/000000/administrator-male.png">
+                <input type="text" placeholder="Your Username">
+                <img class="arrow-down" src="https://img.icons8.com/ios-glyphs/30/000000/down.png">
+            </div><!-- user -->
+            <div class="email inactive">
+                <img src="https://img.icons8.com/metro/26/000000/new-post.png">
+                <input type="email" placeholder="Your Email">
+                <img class="arrow-down" src="https://img.icons8.com/ios-glyphs/30/000000/down.png">
+            </div><!-- user -->
+            <div class="password inactive">
+                <img src="https://img.icons8.com/ios-glyphs/30/000000/key.png">
+                <input type="password" placeholder="Your Password">
+                <img class="arrow-down" src="https://img.icons8.com/ios-glyphs/30/000000/down.png">
+            </div><!-- user -->
+            <div class="thank inactive">
+                <img src="https://img.icons8.com/material-sharp/30/000000/hearts.png">
+                <p>Thank You</p>
+                <img src="https://img.icons8.com/material-sharp/30/000000/hearts.png">
+            </div><!-- user -->
+   </form>
+    
+
+    <script>
+       function animatForm () {
+          const arrows = document.querySelectorAll('.arrow-down');
+          arrows.forEach(arrow => {
+            arrow.addEventListener('click', () => {
+                const input = arrow.previousElementSibling;
+                const parent = arrow.parentElement;
+                const nextForm = parent.nextElementSibling;
+
+                if(input.type === 'text' && validateUser(input)){
+                    nextSlide(parent, nextForm);
+                }
+
+                if(input.type === 'email' && validateEmail(input)){
+                    nextSlide(parent, nextForm);
+                }
+
+                if(input.type === 'password'){
+                    nextSlide(parent, nextForm);
+                }
+
+                if(input.type === 'thank'){
+                    nextSlide(parent, nextForm);
+                }
+            });
+          });
+       }
+
+       function validateUser(user){
+          
+           if( user.value.length < 6 ){
+               error('rgb(189,87,87)');
+           }else{
+               error('rgb(87, 189, 130)');
+               return true;
+           }
+       }
+
+       function validateEmail(email){
+           var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            
+            if(re.test(email.value)){
+                error('rgb(87, 189, 130)');
+                return true;
+              }else{
+                error('rgb(189,87,87)');
+              }
+       }    
+
+       
+       function nextSlide(parent, nextForm){
+           parent.classList.add('inactive');
+           parent.classList.remove('active');
+           nextForm.classList.add('active');
+       }
+
+       function error(color){
+          document.body.style.backgroundColor = color; 
+       }
+
+
+       animatForm();
+    </script>
+</body>
+</html>
