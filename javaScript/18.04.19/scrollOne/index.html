@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Scroll</title>
+    <style>
+        * {
+          margin: 0;
+          padding: 0;
+        }
+      .container {
+          width: 80%;
+          background: #eee;
+          margin: 0 auto;
+      }
+      .uturn {
+          padding: 40px;
+      }
+      h1 {
+          padding: 30px 0 10px 0;
+      }
+      h2{
+          padding-top: 30px;
+          text-align: center;
+      }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Scroll & Scroll Scroll & Scroll</h2>
+        <div class="uturn">
+        <h1>X & Y</h1>
+         <p>The screenX and screenY properties returns the x (horizontal) and y (vertical) coordinates of the window relative to the screen.</p>
+        <h1>Scroll Event</h1>
+        <p><pre>
+                window.addEventListener('scroll', () => {
+                    console.log('Scrolled!');
+                });
+            </pre>
+            </p>
+   
+
+        <h1>Scroll Vertical</h1>
+        <p><pre>
+                window.addEventListener('scroll', () => {
+                    /* console.log('Scrolled!'); */
+                    const yValue = window.scrollY;
+                    console.log(yValue); 
+                });
+        </pre></p>
+
+        <h1>Scroll Height Value</h1>
+        <p><pre>
+                window.addEventListener('scroll', () => {
+                    /* console.log('Scrolled!'); */
+                    const yValue = window.scrollY;
+                    /* console.log(yValue); */
+                    const height = document.documentElement.scrollHeight;
+                    console.log(height);
+                });
+        </pre></p>
+
+        <h1>Scroll Bottom</h1>
+        <p><pre>
+                window.addEventListener('scroll', () => {
+                    /* console.log('Scrolled!'); */
+                    const yValue = window.scrollY;
+                    /* console.log(yValue); */
+                    /* const height = document.documentElement.scrollHeight;
+                    console.log(height); */
+                   const bottom = document.documentElement.scrollHeight - window.innerHeight;
+                   /* console.log(bottom); */
+        
+                   if(Math.ceil(yValue) === bottom){
+                       alert('You reached BOTTOM ! VALUE = 1077 !');
+                   }
+                });
+        </pre></p>
+
+        <h1>Scroll Bottom Alert</h1>
+        <p><pre>
+                window.addEventListener('scroll', () => {
+                    /* console.log('Scrolled!'); */
+                    const yValue = window.scrollY;
+                    /* console.log(yValue); */
+                    /* const height = document.documentElement.scrollHeight;
+                    console.log(height); */
+                   const bottom = document.documentElement.scrollHeight - window.innerHeight;
+                    console.log(bottom);
+                });
+        </pre></p>
+
+        <h1>X & Y</h1>
+         <p>The screenX and screenY properties returns the x (horizontal) and y (vertical) coordinates of the window relative to the screen.</p>
+        <h1>Scroll Event</h1>
+        <p><pre>
+                window.addEventListener('scroll', () => {
+                    console.log('Scrolled!');
+                });
+            </pre>
+            </p>
+   
+
+        <h1>Scroll Vertical</h1>
+        <p><pre>
+                window.addEventListener('scroll', () => {
+                    /* console.log('Scrolled!'); */
+                    const yValue = window.scrollY;
+                    console.log(yValue); 
+                });
+        </pre></p>
+
+        <h1>Scroll Height Value</h1>
+        <p><pre>
+                window.addEventListener('scroll', () => {
+                    /* console.log('Scrolled!'); */
+                    const yValue = window.scrollY;
+                    /* console.log(yValue); */
+                    const height = document.documentElement.scrollHeight;
+                    console.log(height);
+                });
+        </pre></p>
+
+        <h1>Scroll Bottom</h1>
+        <p><pre>
+                window.addEventListener('scroll', () => {
+                    /* console.log('Scrolled!'); */
+                    const yValue = window.scrollY;
+                    /* console.log(yValue); */
+                    /* const height = document.documentElement.scrollHeight;
+                    console.log(height); */
+                   const bottom = document.documentElement.scrollHeight - window.innerHeight;
+                   /* console.log(bottom); */
+        
+                   if(Math.ceil(yValue) === bottom){
+                       alert('You reached BOTTOM ! VALUE = 1077 !');
+                   }
+                });
+        </pre></p>
+
+        <h1>Scroll Bottom Alert</h1>
+        <p><pre>
+                window.addEventListener('scroll', () => {
+                    /* console.log('Scrolled!'); */
+                    const yValue = window.scrollY;
+                    /* console.log(yValue); */
+                    /* const height = document.documentElement.scrollHeight;
+                    console.log(height); */
+                   const bottom = document.documentElement.scrollHeight - window.innerHeight;
+                    console.log(bottom);
+                });
+        </pre></p>
+        
+    </div>
+</div>
+
+    <script>
+        window.addEventListener('scroll', () => {
+            /* console.log('Scrolled!'); */
+            const yValue = window.scrollY;
+            /* console.log(yValue); */
+            const height = document.documentElement.scrollHeight;
+            /* console.log(height); */
+            const bottom = document.documentElement.scrollHeight - window.innerHeight;
+            /* console.log(bottom); */
+
+           if(Math.ceil(yValue) === bottom){
+               alert('You reached BOTTOM ! VALUE = 1077 !');
+           }
+        });
+    </script>
+</body>
+</html>
