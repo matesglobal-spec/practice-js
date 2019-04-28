@@ -1,0 +1,95 @@
+// Screen
+// ======
+@import "compass";
+@import "grids";
+* {
+    margin: 0;
+    padding: 0;
+}
+.containe {
+    text-align: center;
+    width: 1200px;
+    margin: 40px auto;
+    background-color:grey;
+    height: 200px;
+    position: relative;
+}
+.full_width {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: green;
+}
+.left_width {
+    @include span(8 of 12);
+}
+.right_width {
+    @include span(4 of 12);
+}
+.blocka {
+    margin: 40px 0;
+    color: red;
+    @include span(4);
+    background: green;
+}
+.blockb {
+    margin: 40px 0;
+    color: red;
+    @include span(4);
+    background: green;
+}
+.blockc {
+    margin: 40px 0;
+    color: red;
+    @include span(4);
+    background: green;
+}
+.block:nth-child(1) {
+    margin: 40px 0;
+    color: red;
+    @include span(4);
+    background: green;
+}
+.block:nth-child(2) {
+    margin: 40px 0;
+    color: red;
+    @include span(4);
+    background: green;
+}
+.block:nth-child(3) {
+    margin: 40px 0;
+    color: red;
+    @include span(4);
+    background: green;
+}
+.block1 {
+    margin: 40px 0;
+    @include span(4 of 12);
+    background: green;
+}
+.block2 {
+    margin: 40px 0;
+    @include span(2 of 12);
+    background: green;
+}
+.block3 {
+    margin: 40px 0;
+    @include span(3 of 12);
+    background: green;
+}
+.block4 {
+    margin: 40px 0;
+    @include span(3);
+    background: green;
+}
+.block5 {
+    margin: 40px 0;
+    @include span(3);
+    background: green;
+}
+.block6 {
+    margin: 40px 0;
+    @include span(3);
+    background: green;
+}
